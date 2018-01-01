@@ -14,7 +14,8 @@ To start the project in development mode type:
 
     yarn start
 
-## Build
+
+## Build
 
 To build the project, type:
 
