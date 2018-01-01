@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "errews-homepage",
+  "version": "1.0.0",
+  "description": "https://www.erre.ws/ landing page",
+  "repository": "https://github.com/erremauro/errews-homepage.git",
+  "author": "Roberto Mauro <erremauro@icloud.com>",
+  "homepage": "https://www.erre.ws",
+  "license": "MIT",
+  "dependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}
