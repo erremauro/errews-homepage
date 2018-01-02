@@ -24,9 +24,10 @@ body {
 }
 
 .nav-links {
-  margin: 4em auto;
+  margin: 3em auto;
   text-align: center;
   font-family: sans-serif;
+  font-size: 1.4em;
 }
 
 .nav-links > ul,
@@ -42,6 +43,7 @@ body {
 
 .nav-links > ul > li {
   margin-left: 1em;
+  margin-right: 0.4em;
 }
 
 .nav-links > ul > li > a {
