@@ -1,11 +1,15 @@
 import createEyeView from "./eye-view";
 import createEngine from "./engine";
 
-// define area of interaction
-const MIN_Y = 20;
-const MAX_Y = 500;
-const MIN_X = 200;
-const MAX_X = 1050;
+// define bleeding in area of interaction
+const MARGIN_TOP = 90;
+const MARGIN_BOTTOM = 100;
+const MARGIN_LEFT = 200;
+const MARGIN_RIGHT = 200;
+let MIN_Y;
+let MAX_Y;
+let MIN_X;
+let MAX_X;
 
 const EyeProps = {
   target: "face",
@@ -28,6 +32,14 @@ function initializeView(root) {
   faceDiv.className = "face";
   rootDiv.innerHTML = "";
   rootDiv.appendChild(faceDiv);
+
+  const navLink = document.getElementById("nav-links").getBoundingClientRect();
+  const face = document.getElementById("face").getBoundingClientRect();
+
+  MIN_Y = face.top - MARGIN_TOP;
+  MAX_Y = navLink.bottom + MARGIN_BOTTOM;
+  MIN_X = face.left - MARGIN_LEFT;
+  MAX_X = face.right + MARGIN_RIGHT;
 }
 
 function shouldLook(mouseX, mouseY) {
